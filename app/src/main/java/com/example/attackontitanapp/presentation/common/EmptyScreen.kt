@@ -39,7 +39,7 @@ fun EmptyScreen(
     heroes: LazyPagingItems<Titan>? = null
 ) {
     var message by remember {
-        mutableStateOf("Find your Favorite Hero!")
+        mutableStateOf("Find your Favorite Titan!")
     }
     var icon by remember {
         mutableStateOf(R.drawable.ic_search_document)
@@ -121,10 +121,10 @@ fun EmptyContent(
 fun parseErrorMessage(error: LoadState.Error): String {
     return when (error.error) {
         is SocketTimeoutException -> {
-            "Server Unavailable."
+            "Server Unavailable, Please try again after some time."
         }
         is ConnectException -> {
-            "Internet Unavailable."
+            "No Internet, Please check your Internet Connection."
         }
         else -> {
             "Unknown Error."
@@ -138,7 +138,7 @@ fun EmptyScreenPreview() {
     EmptyContent(
         alphaAnim = ContentAlpha.disabled,
         icon = R.drawable.ic_network_error,
-        message = "Internet Unavailable."
+        message = "No Internet, Please check your Internet Connection."
     )
 }
 
@@ -148,6 +148,6 @@ fun EmptyScreenDarkPreview() {
     EmptyContent(
         alphaAnim = ContentAlpha.disabled,
         icon = R.drawable.ic_network_error,
-        message = "Internet Unavailable."
+        message = "No Internet, Please check your Internet Connection."
     )
 }

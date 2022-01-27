@@ -2,7 +2,7 @@ package com.example.attackontitanapp.util
 
 object Constants {
 
-    const val BASE_URL = "BASE_URL"
+    const val BASE_URL = "http://attack-on-titan-server.herokuapp.com"
 
     const val DETAILS_ARGUMENT_KEY = "titanId"
 
@@ -17,8 +17,11 @@ object Constants {
     const val LAST_ON_BOARDING_PAGE = 2
 
     const val ITEMS_PER_PAGE = 3
-    const val ABOUT_TEXT_MAX_LINES = 7
 
     const val MIN_BACKGROUND_IMAGE_HEIGHT = 0.4f
+
+    const val VIBRANT="vibrant"
+    const val DARK_VIBRANT="darkVibrant"
+    const val ON_DARK_VIBRANT="onDarkVibrant"
 
 }

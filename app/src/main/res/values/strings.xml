@@ -9,10 +9,10 @@
     <string name="close_icon">Close Icon</string>
     <string name="info_icon">Info Icon</string>
     <string name="power">Power</string>
-    <string name="month">Month</string>
-    <string name="birthday">Birthday</string>
+    <string name="height">Height</string>
+    <string name="type">Titan Type</string>
     <string name="about">About</string>
-    <string name="family">Family</string>
+    <string name="inheritors">Inheritors</string>
     <string name="abilities">Abilities</string>
-    <string name="nature_types">Nature Types</string>
+    <string name="other_names">Other Names</string>
 </resources>

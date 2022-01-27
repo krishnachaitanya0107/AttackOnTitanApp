@@ -7,6 +7,9 @@ import androidx.palette.graphics.Palette
 import coil.ImageLoader
 import coil.request.ImageRequest
 import coil.request.SuccessResult
+import com.example.attackontitanapp.util.Constants.DARK_VIBRANT
+import com.example.attackontitanapp.util.Constants.ON_DARK_VIBRANT
+import com.example.attackontitanapp.util.Constants.VIBRANT
 
 object PaletteGenerator {
 
@@ -29,24 +32,30 @@ object PaletteGenerator {
 
     fun extractColorsFromBitmap(bitmap: Bitmap): Map<String, String> {
         return mapOf(
-            "vibrant" to parseColorSwatch(
-                color = Palette.from(bitmap).generate().vibrantSwatch
+            VIBRANT to parseColorSwatch(
+                color = Palette.from(bitmap).generate().vibrantSwatch,
+                darkVibrant = false
             ),
-            "darkVibrant" to parseColorSwatch(
-                color = Palette.from(bitmap).generate().darkVibrantSwatch
+            DARK_VIBRANT to parseColorSwatch(
+                color = Palette.from(bitmap).generate().darkVibrantSwatch,
+                darkVibrant = true
             ),
-            "onDarkVibrant" to parseBodyColor(
+            ON_DARK_VIBRANT to parseBodyColor(
                 color = Palette.from(bitmap).generate().darkVibrantSwatch?.bodyTextColor
             )
         )
     }
 
-    private fun parseColorSwatch(color: Palette.Swatch?): String {
+    private fun parseColorSwatch(color: Palette.Swatch?, darkVibrant:Boolean): String {
         return if (color != null) {
             val parsedColor = Integer.toHexString(color.rgb)
             return "#$parsedColor"
         } else {
-            "#000000"
+            if(!darkVibrant){
+                "#FFFFFF"
+            } else {
+                "#000000"
+            }
         }
     }
 
