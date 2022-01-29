@@ -24,4 +24,6 @@ object Constants {
     const val DARK_VIBRANT="darkVibrant"
     const val ON_DARK_VIBRANT="onDarkVibrant"
 
+    const val TIMEOUT=20L
+
 }

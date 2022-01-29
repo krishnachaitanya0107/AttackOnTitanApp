@@ -121,10 +121,10 @@ fun EmptyContent(
 fun parseErrorMessage(error: LoadState.Error): String {
     return when (error.error) {
         is SocketTimeoutException -> {
-            "Server Unavailable, Please try again after some time."
+            "Server Unavailable,\nPlease try again later."
         }
         is ConnectException -> {
-            "No Internet, Please check your Internet Connection."
+            "No Internet,\nPlease check your Internet Connection."
         }
         else -> {
             "Unknown Error."
@@ -138,7 +138,7 @@ fun EmptyScreenPreview() {
     EmptyContent(
         alphaAnim = ContentAlpha.disabled,
         icon = R.drawable.ic_network_error,
-        message = "No Internet, Please check your Internet Connection."
+        message = "No Internet,\nPlease check your Internet Connection."
     )
 }
 
@@ -148,6 +148,6 @@ fun EmptyScreenDarkPreview() {
     EmptyContent(
         alphaAnim = ContentAlpha.disabled,
         icon = R.drawable.ic_network_error,
-        message = "No Internet, Please check your Internet Connection."
+        message = "No Internet,\nPlease check your Internet Connection."
     )
 }

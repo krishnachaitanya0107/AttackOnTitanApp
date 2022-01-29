@@ -6,6 +6,7 @@ import com.example.attackontitanapp.data.remote.AttackOnTitanApi
 import com.example.attackontitanapp.data.repository.RemoteDataSourceImpl
 import com.example.attackontitanapp.domain.repository.RemoteDataSource
 import com.example.attackontitanapp.util.Constants.BASE_URL
+import com.example.attackontitanapp.util.Constants.TIMEOUT
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
@@ -29,8 +30,8 @@ object NetworkModule {
     @Singleton
     fun provideHttpClient(): OkHttpClient {
         return OkHttpClient.Builder()
-            .readTimeout(15, TimeUnit.SECONDS)
-            .connectTimeout(15, TimeUnit.SECONDS)
+            .readTimeout(TIMEOUT, TimeUnit.SECONDS)
+            .connectTimeout(TIMEOUT, TimeUnit.SECONDS)
             .build()
     }
 

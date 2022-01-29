@@ -4,10 +4,14 @@ import androidx.compose.material.Colors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
-val Purple200 = Color(0xFFBB86FC)
-val Purple500 = Color(0xFF6200EE)
-val Purple700 = Color(0xFF3700B3)
+//val Purple200 = Color(0xFFBB86FC)
+//val Purple500 = Color(0xFF6200EE)
+//val Purple700 = Color(0xFF3700B3)
 val Teal200 = Color(0xFF03DAC5)
+
+val DarkGreen = Color(0xFF294023)
+val MediumGreen = Color(0xFF3B5C32)
+val LightGreen = Color(0xFF6CB359)
 
 val LightGray = Color(0xFFD8D8D8)
 val DarkGray = Color(0xFF2A2A2A)
@@ -19,7 +23,7 @@ val ShimmerDarkGray = Color(0xFF1D1D1D)
 
 val Colors.statusBarColor
     @Composable
-    get() = if (isLight) Purple700 else Color.Black
+    get() = if (isLight) DarkGreen else Color.Black
 
 val Colors.welcomeScreenBackgroundColor
     @Composable
@@ -36,7 +40,7 @@ val Colors.descriptionColor
 
 val Colors.activeIndicatorColor
     @Composable
-    get() = if (isLight) Purple500 else Purple700
+    get() = if (!isLight) MediumGreen else DarkGreen
 
 val Colors.inactiveIndicatorColor
     @Composable
@@ -44,7 +48,7 @@ val Colors.inactiveIndicatorColor
 
 val Colors.buttonBackgroundColor
     @Composable
-    get() = if (isLight) Purple500 else Purple700
+    get() = if (!isLight) MediumGreen else DarkGreen
 
 val Colors.topAppBarContentColor: Color
     @Composable
@@ -52,4 +56,4 @@ val Colors.topAppBarContentColor: Color
 
 val Colors.topAppBarBackgroundColor: Color
     @Composable
-    get() = if (isLight) Purple500 else Color.Black
+    get() = if (isLight) MediumGreen else Color.Black
