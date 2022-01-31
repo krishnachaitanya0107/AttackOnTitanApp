@@ -62,10 +62,10 @@ fun InfoBox(
 @Preview(showBackground = true)
 fun InfoBoxPreview() {
     InfoBox(
-        icon = painterResource(id = R.drawable.ic_bolt),
+        icon = painterResource(id = R.drawable.ic_height),
         iconColor = MaterialTheme.colors.primary,
         bigText = "92",
-        smallText = "Power",
+        smallText = "Height",
         textColor = MaterialTheme.colors.titleColor
     )
 }
@@ -74,10 +74,10 @@ fun InfoBoxPreview() {
 @Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
 fun InfoBoxDarkPreview() {
     InfoBox(
-        icon = painterResource(id = R.drawable.ic_bolt),
+        icon = painterResource(id = R.drawable.ic_height),
         iconColor = MaterialTheme.colors.primary,
         bigText = "92",
-        smallText = "Power",
+        smallText = "Height",
         textColor = MaterialTheme.colors.titleColor
     )
 }

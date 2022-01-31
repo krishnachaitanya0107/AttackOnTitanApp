@@ -47,8 +47,8 @@ fun OrderedList(
 @Preview(showBackground = true)
 fun OrderedListPreview() {
     OrderedList(
-        title = "Family",
-        items = listOf("Minato", "Kushina"),
+        title = "Inheritors",
+        items = listOf("Eren Jaeger", "Lara Tybur"),
         textColor = MaterialTheme.colors.titleColor,
         maxWidth = Dp(400f)
     )
@@ -58,8 +58,8 @@ fun OrderedListPreview() {
 @Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
 fun OrderedListDarkPreview() {
     OrderedList(
-        title = "Family",
-        items = listOf("Minato", "Kushina"),
+        title = "Inheritors",
+        items = listOf("Eren Jaeger", "Lara Tybur"),
         textColor = MaterialTheme.colors.titleColor,
         maxWidth = Dp(400f)
     )

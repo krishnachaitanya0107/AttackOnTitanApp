@@ -140,14 +140,6 @@ fun BottomSheetContent(
                 .padding(bottom = LARGE_PADDING),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            /*Icon(
-                modifier = Modifier
-                    .size(INFO_ICON_SIZE)
-                    .weight(2f),
-                painter = painterResource(id = R.drawable.ic_logo),
-                contentDescription = stringResource(id = R.string.app_logo),
-                tint = contentColor
-            )*/
             Text(
                 modifier = Modifier
                     .weight(8f),
