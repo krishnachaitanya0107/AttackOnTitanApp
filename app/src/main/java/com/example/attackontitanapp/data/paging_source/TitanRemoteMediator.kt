@@ -9,10 +9,9 @@ import com.example.attackontitanapp.data.local.AotDatabase
 import com.example.attackontitanapp.data.remote.AttackOnTitanApi
 import com.example.attackontitanapp.domain.model.Titan
 import com.example.attackontitanapp.domain.model.TitanRemoteKeys
-import javax.inject.Inject
 
 @ExperimentalPagingApi
-class TitanRemoteMediator @Inject constructor(
+class TitanRemoteMediator (
     private val attackOnTitanApi: AttackOnTitanApi,
     private val aotDatabase: AotDatabase
 ) : RemoteMediator<Int, Titan>() {

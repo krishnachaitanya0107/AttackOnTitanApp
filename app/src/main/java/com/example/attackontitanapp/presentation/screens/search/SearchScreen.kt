@@ -3,6 +3,7 @@ package com.example.attackontitanapp.presentation.screens.search
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.getValue
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
@@ -22,9 +23,13 @@ fun SearchScreen(
     val heroes = searchViewModel.searchedTitans.collectAsLazyPagingItems()
 
     val systemUiController = rememberSystemUiController()
-    systemUiController.setStatusBarColor(
-        color = MaterialTheme.colors.statusBarColor
-    )
+    val statusBarColor=MaterialTheme.colors.statusBarColor
+
+    SideEffect {
+        systemUiController.setStatusBarColor(
+            color = statusBarColor
+        )
+    }
 
     Scaffold(
         topBar = {

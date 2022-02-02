@@ -5,9 +5,8 @@ import androidx.paging.PagingState
 import com.example.attackontitanapp.data.remote.AttackOnTitanApi
 import com.example.attackontitanapp.domain.model.Titan
 import java.lang.Exception
-import javax.inject.Inject
 
-class SearchTitansSource @Inject constructor(
+class SearchTitansSource(
     private val attackOnTitanApi: AttackOnTitanApi,
     private val query: String
 ) : PagingSource<Int, Titan>() {
