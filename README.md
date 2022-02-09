@@ -1,28 +1,50 @@
 # Attack On Titan App
-An Attack On Titan Android App made with Kotlin which Fetches data from a REST API deployed on my Backend Server developed with Ktor .
+
+Attack On Titan App is a demo application based on modern Android application tech-stacks and MVVM architecture.
+Fetching data from the network and integrating persisted data in the database via repository pattern.
 
 # Screenshots
 <p align="center">
   <img src="./docs/screenshots/Splash Dark.jpg" alt="Splash Screen Dark" width="144" height="320" margin="30">
   <img src="./docs/screenshots/Splash light.jpg" alt="Splash Screen Light" width="144" height="320" margin="30">
   <img src="./docs/screenshots/Home Screen.jpg" alt="Home Screen" width="144" height="320" margin="30">
+  <img src="./docs/screenshots/Home Screen 2.jpg" alt="Home Screen 2" width="144" height="320" margin="30">
+</p>
+<p align="center">
   <img src="./docs/screenshots/Details Screen.jpg" alt="Details Screen" width="144" height="320" margin="30">
   <img src="./docs/screenshots/Details Screen shrink.jpg" alt="Details Screen shrink" width="144" height="320" margin="30">
+  <img src="./docs/screenshots/Details Screen 2.jpg" alt="Details Screen 2" width="144" height="320" margin="30">
+  <img src="./docs/screenshots/Details Screen Shrink 2.jpg" alt="Details Screen shrink 2" width="144" height="320" margin="30">
 </p>
 
 # Features
 
-- Detects text in images Using the ML Kit Text Recognition API
-- Uses the CameraX to show a viewfinder and display the camera preview 
-- Provides a Flashlight button to turn on/off the device flashlight if needed
-- Extracted text can be copied to clipboard or can be shared via any another text sharing app available on the user's device
-- Handles device rotation as well 
+- Consumes a REST API to get and display information about Titans
+- Remote Mediator which can mediate between multiple data sources 
+- offline caching functionality
+- Shimmer Effect while fetching data
+- Swipe to refresh functionality
+- Animated Splash Screen
+- Extracts Colors from an Image and Apply them into the Layout (In the details screen)
+- Light and Dark Theme Design
+- Compose navigation
+- Clean Architecture
+
 
 # Tools & Technology Used
 
 - Android Studio
 - Kotlin
 - Jetpack Compose
+- Room Persistence Library
+- Shimmer Layouts
+- Coil
+- DataStore
+- Paging3
+- Retrofit
+- Accompanist Library
+- Compose Navigation
+- Dependency Injection ( Dagger and hilt)
 - Attack On Titan API
 - Palette API
 
