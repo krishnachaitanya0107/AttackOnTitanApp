@@ -2,7 +2,7 @@
 buildscript {
     ext {
         compose_version = '1.2.0-alpha01'
-        accompanist_version = '0.21.5-rc'
+        accompanist_version = '0.24.4-alpha'
         kotlin_version = '1.6.10'
         room_version = '2.4.1'
         retrofit_version = '2.9.0'
@@ -12,9 +12,9 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath 'com.android.tools.build:gradle:7.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "com.google.dagger:hilt-android-gradle-plugin:2.38.1"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.40.5"
         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
